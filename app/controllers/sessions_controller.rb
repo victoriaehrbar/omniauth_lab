@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     # after redirect, we have access to the returned data
     session[:name] = request.env['omniauth.auth']['info']['name']
     session[:omniauth_data] = request.env['omniauth.auth']
-
+    # byebug
     # Ye olde redirect
     redirect_to root_path
   end
